@@ -1,0 +1,256 @@
+/* --- FAST FOOD THEME STYLING --- */
+
+:root {
+    /* Primary Fast Food Colors (e.g., McDonald's, In-N-Out, Burger King) */
+    --primary-color: #DA291C;    /* Bold Red (Active, buttons) */
+    --accent-color: #FFC72C;     /* Golden Yellow (Highlights, headers) */
+    --secondary-color: #008000;  /* Green for success/call-to-action */
+    
+    /* Base Colors */
+    --text-color: #333;
+    --background-color: #fcfcfc; /* Very light background */
+    --card-background: #ffffff;
+    --border-color: #f1f1f1;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Minimalist Reset and Setup (Keep this structure clean) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container & Layout */
+.container {
+    width: 90%;
+    max-width: 550px;
+    padding: 30px 40px;
+    background: var(--card-background);
+    border-radius: 16px; /* Slightly rounder for a friendlier look */
+    box-shadow: 0 8px 15px var(--shadow-color);
+    margin: 20px 0;
+}
+
+/* Headers - Use bold yellow for emphasis */
+header h1 {
+    color: var(--primary-color);
+    font-size: 2.2em;
+    text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 1.5em;
+    border-left: 5px solid var(--accent-color); /* Yellow accent line */
+    padding-left: 10px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 30px 0;
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(218, 41, 28, 0.2); /* Red glow */
+    outline: none;
+}
+
+/* Buttons - Bold, catchy red and yellow/green */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    border: none;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    background-color: var(--primary-color); /* Default Red */
+    color: white;
+}
+
+.btn.primary {
+    background-color: var(--secondary-color); /* Green for main action */
+}
+
+.btn:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.btn.logout {
+    background-color: #6c757d;
+    padding: 8px 15px;
+    font-size: 14px;
+    float: right;
+    margin-top: -50px;
+    box-shadow: none;
+}
+
+/* Messages & Errors */
+.error, .alert {
+    display: block;
+    color: var(--primary-color); 
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.success-message {
+    color: white;
+    background-color: var(--secondary-color);
+    border: 1px solid #1e7e34;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.error-message {
+    color: white;
+    background-color: var(--primary-color);
+    border: 1px solid #a71d2a;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/* --- Fast Food Order Calculation Styling --- */
+
+.calculation-section {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--accent-color); /* Highlight calculations with Yellow */
+    border: 2px solid var(--primary-color); /* Red border */
+    border-radius: 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.calculation-box p {
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.calculation-box .total-line {
+    font-size: 1.4em;
+    font-weight: 800;
+    margin: 10px 0;
+    border-top: 2px dashed #a07a1b; /* Darker yellow dash */
+    padding-top: 10px;
+    color: var(--primary-color); /* Total in Red */
+}
+
+.calculation-box .change-line {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #000;
+}
+
+.success-text {
+    color: var(--secondary-color); /* Green for success */
+    font-weight: 800;
+}
+
+.error-text {
+    color: var(--primary-color); /* Red for error */
+    font-weight: 800;
+}
+
+
+/* Order System Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+th:first-child {
+    border-top-left-radius: 8px;
+}
+th:last-child {
+    border-top-right-radius: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #fffaf0; /* Slight off-white stripe */
+}
+
+/* Links */
+p a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
